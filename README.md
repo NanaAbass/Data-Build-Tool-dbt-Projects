@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PulseCare Analytics — dbt Project
 
 ## Business Scenario
@@ -87,3 +88,7 @@ uv run dbt seed --profiles-dir . --target prod
 - dbt debug passes on both dev and prod targets
 - dbt seed loads all 10 rows of region_lookup into dev_analytics_seed_data.region_lookup
 - dev and prod DuckDB files confirmed physically isolated — prod stays empty until deliberately seeded
+=======
+# Data-Build-Tool-dbt-Projects
+This repository contains portfolio projects that was created during my journey to dbt and analytics engineer mastery.
+>>>>>>> 01a0ab79bd5703615523fa0bb787bd083e09cc97
