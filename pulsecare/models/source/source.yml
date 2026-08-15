@@ -1,6 +1,6 @@
 sources:
     - name: raw
-      database: 'dev'
+      database: "{{ target.database }}"
       schema: raw
       tables:
         - name: patient_visits

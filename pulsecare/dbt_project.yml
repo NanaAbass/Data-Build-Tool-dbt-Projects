@@ -50,3 +50,6 @@ models:
 seeds:
     pulsecare:
         +schema: bronze
+
+on-run-start:
+  - "{{ log('Running dbt target=' ~ target.name ~ ' database=' ~ target.database ~ ' schema=' ~ target.schema, info=true) }}"

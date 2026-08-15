@@ -6,3 +6,9 @@ pulsecare:
       path: 'dev.duckdb'
       schema: raw
       threads: 4
+
+    prod:
+      type: duckdb
+      path: 'prod.duckdb'
+      schema: raw
+      threads: 4

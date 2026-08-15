@@ -1,0 +1,26 @@
+version: 2
+
+snapshots:
+  - name: provider_roster
+    description: "SCD Type 2 history of the provider roster (specialty, region, active status)."
+    columns:
+      - name: provider_id
+        tests:
+          - not_null:
+              config:
+                severity: error
+
+      - name: dbt_valid_from
+        tests:
+          - not_null:
+              config:
+                severity: error
+
+      - name: dbt_scd_id
+        tests:
+          - unique:
+              config:
+                severity: error
+          - not_null:
+              config:
+                severity: error
