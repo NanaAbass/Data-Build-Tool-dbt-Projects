@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# PulseCare Analytics — dbt Project
+# PulseCare — dbt Project
 
 ## Business Scenario
 **PulseCare Health Network** operates outpatient primary care, urgent care, and
