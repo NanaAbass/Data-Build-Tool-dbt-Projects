@@ -1,0 +1,165 @@
+version: 2
+
+models:
+  - name: bronze_patient_visits
+    description: "Raw patient visit events, landed as-is from the raw.patient_visits source."
+    columns:
+      - name: visit_id
+        description: "Primary key for a visit."
+        tests:
+          - unique:
+              config:
+                severity: error
+          - not_null:
+              config:
+                severity: error
+
+      - name: patient_id
+        tests:
+          - not_null:
+              config:
+                severity: error
+
+      - name: provider_id
+        tests:
+          - not_null:
+              config:
+                severity: error
+
+      - name: region_id
+        tests:
+          - not_null:
+              config:
+                severity: warn
+
+      - name: visit_date
+        description: "Date the visit occurred; must not be recorded in the future."
+        tests:
+          - not_null:
+              config:
+                severity: error
+          - not_future_date:
+              config:
+                severity: error
+
+      - name: visit_type
+        tests:
+          - accepted_values:
+              values: ["New Patient", "Follow-Up", "Annual Physical", "Urgent Care", "Telehealth"]
+              config:
+                severity: warn
+
+      - name: visit_status
+        tests:
+          - accepted_values:
+              values: ["Completed", "No-Show", "Cancelled"]
+              config:
+                severity: warn
+
+  - name: bronze_insurance_claims
+    description: "Raw insurance claim events, landed as-is from the raw.insurance_claims source."
+    columns:
+      - name: claim_id
+        tests:
+          - unique:
+              config:
+                severity: error
+          - not_null:
+              config:
+                severity: error
+
+      - name: visit_id
+        tests:
+          - not_null:
+              config:
+                severity: error
+
+      - name: payer_name
+        tests:
+          - accepted_values:
+              values: ["Aetna", "BlueCross BlueShield", "UnitedHealthcare", "Cigna", "Medicare", "Medicaid"]
+              config:
+                severity: warn
+
+      - name: claim_status
+        tests:
+          - accepted_values:
+              values: ["Paid", "Pending", "Denied", "Partially Paid"]
+              config:
+                severity: warn
+
+      - name: billed_amount
+        tests:
+          - not_null:
+              config:
+                severity: error
+          - non_negative:
+              config:
+                severity: error
+
+      - name: allowed_amount
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+      - name: paid_amount
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+      - name: discount_amount
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+      - name: claim_date
+        tests:
+          - not_future_date:
+              config:
+                severity: error
+
+  - name: bronze_providers
+    description: "Raw provider roster, landed as-is from the raw.providers source."
+    columns:
+      - name: provider_id
+        tests:
+          - unique:
+              config:
+                severity: error
+          - not_null:
+              config:
+                severity: error
+
+      - name: provider_name
+        tests:
+          - not_null:
+              config:
+                severity: error
+
+      - name: region_id
+        tests:
+          - not_null:
+              config:
+                severity: warn
+
+  - name: bronze_region_lookup
+    description: "Regional metadata (region, state, timezone, network tier)."
+    columns:
+      - name: region_id
+        tests:
+          - unique:
+              config:
+                severity: error
+          - not_null:
+              config:
+                severity: error
+
+      - name: network_tier
+        tests:
+          - accepted_values:
+              values: ["Tier 1", "Tier 2", "Tier 3"]
+              config:
+                severity: warn

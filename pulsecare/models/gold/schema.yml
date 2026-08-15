@@ -1,0 +1,120 @@
+version: 2
+
+models:
+  - name: gold_provider_per
+    description: "Provider performance summary: visit volume, claim outcomes, denial rate, and revenue per visit."
+    columns:
+      - name: provider_id
+        tests:
+          - not_null:
+              config:
+                severity: error
+
+      - name: denial_rate
+        description: "Share of a provider's claims that were denied; must fall between 0 and 1."
+        tests:
+          - val_within_range:
+              arguments:
+                min_value: 0
+                max_value: 1
+              config:
+                severity: error
+
+      - name: average_rev_per_visit
+        tests:
+          - non_negative:
+              config:
+                severity: warn
+
+      - name: total_billed
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+      - name: total_paid
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+  - name: gold_provider_rev_summary
+    description: "Provider-level revenue rollup with network tier priority."
+    columns:
+      - name: provider_id
+        tests:
+          - not_null:
+              config:
+                severity: error
+
+      - name: tier_priority
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 0]
+              config:
+                severity: warn
+
+      - name: total_paid
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+      - name: total_billed
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+  - name: gold_reg_rev_summary
+    description: "Region-level revenue rollup with network tier priority."
+    columns:
+      - name: region_id
+        tests:
+          - not_null:
+              config:
+                severity: error
+
+      - name: tier_priority
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 0]
+              config:
+                severity: warn
+
+      - name: total_paid
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+      - name: total_billed
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+  - name: gold_reg_rev
+    description: "Monthly region-level revenue with collection rate."
+    columns:
+      - name: region_id
+        tests:
+          - not_null:
+              config:
+                severity: error
+
+      - name: collection_rate
+        description: "total_paid / total_billed; must fall between 0 and 1."
+        tests:
+          - val_within_range:
+              arguments:
+                min_value: 0
+                max_value: 1
+              config:
+                severity: error
+
+      - name: denied_claims
+        tests:
+          - non_negative:
+              config:
+                severity: warn
