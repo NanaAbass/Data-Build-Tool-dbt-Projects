@@ -9,3 +9,7 @@ wheels/
 # Virtual environments
 .venv
 dbt_internal_packages/
+
+# Duckdb
+*.duckdb
+*.duckdb.wal
