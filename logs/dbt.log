@@ -1,0 +1,150 @@
+[0m06:47:59.885986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209945F0230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002099432D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209920CBE60>]}
+
+
+============================== 06:47:59.908551 | 3ba9f0ec-e0e2-46e3-81de-303fd9e3732e ==============================
+[0m06:47:59.908551 [info ] [MainThread]: Running with dbt=1.12.0
+[0m06:47:59.909552 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\nanaa\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt init', 'log_path': 'logs'}
+[0m06:48:26.013058 [debug] [MainThread]: Starter project path: C:\Users\AbaasahPC\Documents\pulsecare_analytics_phase1\pulsecare_analytics\.venv\Lib\site-packages\dbt\include\starter_project
+[0m06:48:26.079702 [info ] [MainThread]: Setting up your profile.
+[0m06:48:33.163407 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m06:48:33.164405 [info ] [MainThread]: dbt version: 1.12.0
+[0m06:48:33.165404 [info ] [MainThread]: python version: 3.12.10
+[0m06:48:33.165404 [info ] [MainThread]: python path: C:\Users\AbaasahPC\Documents\pulsecare_analytics_phase1\pulsecare_analytics\.venv\Scripts\python.exe
+[0m06:48:33.166406 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m06:48:33.249290 [info ] [MainThread]: Using profiles dir at C:\Users\nanaa\.dbt
+[0m06:48:33.250286 [info ] [MainThread]: Using profiles.yml file at C:\Users\nanaa\.dbt\profiles.yml
+[0m06:48:33.250286 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\AbaasahPC\Documents\pulsecare_analytics_phase1\pulsecare_analytics\pulsecare\dbt_project.yml
+[0m06:48:33.274811 [info ] [MainThread]: adapter type: duckdb
+[0m06:48:33.275869 [info ] [MainThread]: adapter version: 1.11.0
+[0m06:48:33.453774 [info ] [MainThread]: Configuration:
+[0m06:48:33.457218 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m06:48:33.457218 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m06:48:33.457218 [info ] [MainThread]: Required dependencies:
+[0m06:48:33.458652 [debug] [MainThread]: Executing "git --help"
+[0m06:48:33.566421 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m06:48:33.567418 [debug] [MainThread]: STDERR: "b''"
+[0m06:48:33.567418 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m06:48:33.568425 [info ] [MainThread]: Connection:
+[0m06:48:33.568425 [info ] [MainThread]:   database: dev
+[0m06:48:33.569638 [info ] [MainThread]:   schema: main
+[0m06:48:33.570642 [info ] [MainThread]:   path: dev.duckdb
+[0m06:48:33.570642 [info ] [MainThread]:   config_options: None
+[0m06:48:33.571825 [info ] [MainThread]:   extensions: None
+[0m06:48:33.571825 [info ] [MainThread]:   settings: {}
+[0m06:48:33.571825 [info ] [MainThread]:   external_root: .
+[0m06:48:33.572842 [info ] [MainThread]:   use_credential_provider: None
+[0m06:48:33.573922 [info ] [MainThread]:   attach: None
+[0m06:48:33.574432 [info ] [MainThread]:   filesystems: None
+[0m06:48:33.574432 [info ] [MainThread]:   remote: None
+[0m06:48:33.575442 [info ] [MainThread]:   plugins: None
+[0m06:48:33.575442 [info ] [MainThread]:   disable_transactions: False
+[0m06:48:33.576830 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m06:48:34.627585 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m06:48:40.144675 [debug] [MainThread]: Using duckdb connection "debug"
+[0m06:48:40.144675 [debug] [MainThread]: On debug: select 1 as id
+[0m06:48:40.145676 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m06:48:40.178044 [debug] [MainThread]: SQL status: OK in 0.032 seconds
+[0m06:48:40.179116 [debug] [MainThread]: On debug: Close
+[0m06:48:40.180141 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m06:48:40.180141 [info ] [MainThread]: [32mAll checks passed![0m
+[0m06:48:40.181143 [info ] [MainThread]: Your new dbt project "pulsecare" was created!
+Initialized new project in C:\Users\AbaasahPC\Documents\pulsecare_analytics_phase1\pulsecare_analytics\pulsecare\pulsecare
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m06:48:40.182620 [debug] [MainThread]: Command `dbt init` succeeded at 06:48:40.181143 after 40.56 seconds
+[0m06:48:40.182620 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m06:48:40.182620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002099681BF80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209964C6AE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209963C0440>]}
+[0m06:48:40.183645 [debug] [MainThread]: Flushing usage events
+[0m06:48:41.699137 [debug] [MainThread]: An error was encountered while trying to flush usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.205"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019ffd1a-7911-7031-be04-f8c5a987f539","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.205","name":"MainReportVersion","pid":15840,"thread":"tokio-rt-worker","ts":"2026-08-13T21:49:58.525949Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\nanaa\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019ffd1a-7911-7031-be04-f8c5a987f539","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false,\"manage_state\":false}","name":"MainReportArgs","pid":15840,"thread":"tokio-rt-worker","ts":"2026-08-13T21:49:58.526771Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ffd1a-7911-7031-be04-f8c5a987f539","level":"debug","msg":"No platform credentials found, skipping remote license","name":"Generic","pid":15840,"thread":"tokio-rt-worker","ts":"2026-08-13T21:49:58.588949Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ffd1a-7911-7031-be04-f8c5a987f539","level":"debug","msg":"License from file C:\\Users\\nanaa\\.dbt\\license.trial is in refresh window, attempting remote refresh","name":"Generic","pid":15840,"thread":"tokio-rt-worker","ts":"2026-08-13T21:50:00.079973Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ffd1a-7911-7031-be04-f8c5a987f539","level":"debug","msg":"Requesting trial license from https://cloud.getdbt.com/api/private/trial-licenses/","name":"Generic","pid":15840,"thread":"main","ts":"2026-08-13T21:50:00.563634Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ffd1a-7911-7031-be04-f8c5a987f539","level":"debug","msg":"Trial license retrieved","name":"Generic","pid":15840,"thread":"main","ts":"2026-08-13T21:50:01.549556Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ffd1a-7911-7031-be04-f8c5a987f539","level":"debug","msg":"License loaded from trial license server","name":"Generic","pid":15840,"thread":"tokio-rt-worker","ts":"2026-08-13T21:50:01.967757Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": [\n    \"compare\",\n    \"strict-static-analysis\"\n  ],\n  \"issued_at\": \"2026-08-13T21:49:59+00:00\",\n  \"expires_at\": \"2026-08-26T20:48:48+00:00\",\n  \"license_type\": \"trial\",\n  \"machine_id\": \"807bb127b2529323aa2eadf062f82fe318e359b98b417c27337cb176176f89fd\",\n  \"days_remaining\": 12,\n  \"trial_start_date\": \"2026-08-12T20:48:48+00:00\"\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019ffd1a-7911-7031-be04-f8c5a987f539","level":"info","msg":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": [\n    \"compare\",\n    \"strict-static-analysis\"\n  ],\n  \"issued_at\": \"2026-08-13T21:49:59+00:00\",\n  \"expires_at\": \"2026-08-26T20:48:48+00:00\",\n  \"license_type\": \"trial\",\n  \"machine_id\": \"807bb127b2529323aa2eadf062f82fe318e359b98b417c27337cb176176f89fd\",\n  \"days_remaining\": 12,\n  \"trial_start_date\": \"2026-08-12T20:48:48+00:00\"\n}","name":"ShowNode","pid":15840,"thread":"tokio-rt-worker","ts":"2026-08-13T21:50:02.350814Z"}}
+{"data":{"completed_at":"2026-08-13T21:50:02.557410Z","elapsed":4.038288116455078,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019ffd1a-7911-7031-be04-f8c5a987f539","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [4.0s]","name":"CommandCompleted","pid":15840,"thread":"tokio-rt-worker","ts":"2026-08-13T21:50:02.562555Z"}}
+[0m22:23:52.348761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024186AD34D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024186A12810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024186A1EC50>]}
+
+
+============================== 22:23:52.363312 | 1b9d631a-9e90-48b8-84b1-8684db76ee58 ==============================
+[0m22:23:52.363312 [info ] [MainThread]: Running with dbt=1.12.0
+[0m22:23:52.365844 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\nanaa\\.dbt', 'invocation_command': 'dbt debug', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'logs'}
+[0m22:23:52.752518 [info ] [MainThread]: dbt version: 1.12.0
+[0m22:23:52.754079 [info ] [MainThread]: python version: 3.11.15
+[0m22:23:52.757096 [info ] [MainThread]: python path: C:\Users\AbaasahPC\Documents\pulsecare_analytics_phase1\pulsecare_analytics\.venv\Scripts\python.exe
+[0m22:23:52.758095 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m22:23:52.776136 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.databricks'
+[0m22:23:53.465855 [info ] [MainThread]: Using profiles dir at C:\Users\nanaa\.dbt
+[0m22:23:53.467857 [info ] [MainThread]: Using profiles.yml file at C:\Users\nanaa\.dbt\profiles.yml
+[0m22:23:53.469868 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\AbaasahPC\Documents\pulsecare_analytics_phase1\pulsecare_analytics\dbt_project.yml
+[0m22:23:53.470871 [info ] [MainThread]: Configuration:
+[0m22:23:53.471856 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m22:23:53.474384 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m22:23:53.475381 [info ] [MainThread]: Required dependencies:
+[0m22:23:53.477393 [debug] [MainThread]: Executing "git --help"
+[0m22:23:53.704099 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:23:53.707109 [debug] [MainThread]: STDERR: "b''"
+[0m22:23:53.709109 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:23:53.711109 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m22:23:53.713621 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m22:23:53.715637 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "dbt_databricks_project", target "dev" invalid: Runtime Error
+    Could not find adapter type databricks!
+
+
+[0m22:23:53.717634 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\AbaasahPC\Documents\pulsecare_analytics_phase1\pulsecare_analytics\dbt_project.yml> not found
+
+[0m22:23:53.724145 [debug] [MainThread]: Command `dbt debug` failed at 22:23:53.724145 after 1.88 seconds
+[0m22:23:53.726173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024186B8FBD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024186B8FF10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024184FA7690>]}
+[0m22:23:53.729170 [debug] [MainThread]: Flushing usage events
+[0m22:23:55.690200 [debug] [MainThread]: An error was encountered while trying to flush usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.205"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019ffd4b-a034-7261-91ca-67a49c41d542","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.205","name":"MainReportVersion","pid":5316,"thread":"tokio-rt-worker","ts":"2026-08-13T22:43:39.804148Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\nanaa\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019ffd4b-a034-7261-91ca-67a49c41d542","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false,\"manage_state\":false}","name":"MainReportArgs","pid":5316,"thread":"tokio-rt-worker","ts":"2026-08-13T22:43:39.804884Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ffd4b-a034-7261-91ca-67a49c41d542","level":"debug","msg":"No platform credentials found, skipping remote license","name":"Generic","pid":5316,"thread":"tokio-rt-worker","ts":"2026-08-13T22:43:39.887788Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ffd4b-a034-7261-91ca-67a49c41d542","level":"debug","msg":"License loaded from file C:\\Users\\nanaa\\.dbt\\license.trial","name":"Generic","pid":5316,"thread":"tokio-rt-worker","ts":"2026-08-13T22:43:42.778101Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": [\n    \"compare\",\n    \"strict-static-analysis\"\n  ],\n  \"issued_at\": \"2026-08-13T21:49:59+00:00\",\n  \"expires_at\": \"2026-08-26T20:48:48+00:00\",\n  \"license_type\": \"trial\",\n  \"machine_id\": \"807bb127b2529323aa2eadf062f82fe318e359b98b417c27337cb176176f89fd\",\n  \"days_remaining\": 12,\n  \"trial_start_date\": \"2026-08-12T20:48:48+00:00\"\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019ffd4b-a034-7261-91ca-67a49c41d542","level":"info","msg":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": [\n    \"compare\",\n    \"strict-static-analysis\"\n  ],\n  \"issued_at\": \"2026-08-13T21:49:59+00:00\",\n  \"expires_at\": \"2026-08-26T20:48:48+00:00\",\n  \"license_type\": \"trial\",\n  \"machine_id\": \"807bb127b2529323aa2eadf062f82fe318e359b98b417c27337cb176176f89fd\",\n  \"days_remaining\": 12,\n  \"trial_start_date\": \"2026-08-12T20:48:48+00:00\"\n}","name":"ShowNode","pid":5316,"thread":"tokio-rt-worker","ts":"2026-08-13T22:43:43.170579Z"}}
+{"data":{"completed_at":"2026-08-13T22:43:43.402521Z","elapsed":3.61224627494812,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019ffd4b-a034-7261-91ca-67a49c41d542","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [3.6s]","name":"CommandCompleted","pid":5316,"thread":"tokio-rt-worker","ts":"2026-08-13T22:43:43.408942Z"}}
+{"data":{"log_version":3,"version":"=2.0.0-preview.205"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019ffec8-5133-7021-82e0-22f38b25df63","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.205","name":"MainReportVersion","pid":14216,"thread":"tokio-rt-worker","ts":"2026-08-14T05:39:28.737793Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\nanaa\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019ffec8-5133-7021-82e0-22f38b25df63","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false,\"manage_state\":false}","name":"MainReportArgs","pid":14216,"thread":"tokio-rt-worker","ts":"2026-08-14T05:39:28.738344Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ffec8-5133-7021-82e0-22f38b25df63","level":"debug","msg":"No platform credentials found, skipping remote license","name":"Generic","pid":14216,"thread":"tokio-rt-worker","ts":"2026-08-14T05:39:28.776917Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ffec8-5133-7021-82e0-22f38b25df63","level":"debug","msg":"License from file C:\\Users\\nanaa\\.dbt\\license.trial is in refresh window, attempting remote refresh","name":"Generic","pid":14216,"thread":"tokio-rt-worker","ts":"2026-08-14T05:39:29.920042Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ffec8-5133-7021-82e0-22f38b25df63","level":"debug","msg":"Requesting trial license from https://cloud.getdbt.com/api/private/trial-licenses/","name":"Generic","pid":14216,"thread":"main","ts":"2026-08-14T05:39:30.249967Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ffec8-5133-7021-82e0-22f38b25df63","level":"debug","msg":"Trial license retrieved","name":"Generic","pid":14216,"thread":"main","ts":"2026-08-14T05:39:31.014033Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ffec8-5133-7021-82e0-22f38b25df63","level":"debug","msg":"License loaded from trial license server","name":"Generic","pid":14216,"thread":"tokio-rt-worker","ts":"2026-08-14T05:39:31.403181Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": [\n    \"compare\",\n    \"strict-static-analysis\"\n  ],\n  \"issued_at\": \"2026-08-14T05:39:30+00:00\",\n  \"expires_at\": \"2026-08-26T20:48:48+00:00\",\n  \"license_type\": \"trial\",\n  \"machine_id\": \"807bb127b2529323aa2eadf062f82fe318e359b98b417c27337cb176176f89fd\",\n  \"days_remaining\": 12,\n  \"trial_start_date\": \"2026-08-12T20:48:48+00:00\"\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019ffec8-5133-7021-82e0-22f38b25df63","level":"info","msg":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": [\n    \"compare\",\n    \"strict-static-analysis\"\n  ],\n  \"issued_at\": \"2026-08-14T05:39:30+00:00\",\n  \"expires_at\": \"2026-08-26T20:48:48+00:00\",\n  \"license_type\": \"trial\",\n  \"machine_id\": \"807bb127b2529323aa2eadf062f82fe318e359b98b417c27337cb176176f89fd\",\n  \"days_remaining\": 12,\n  \"trial_start_date\": \"2026-08-12T20:48:48+00:00\"\n}","name":"ShowNode","pid":14216,"thread":"tokio-rt-worker","ts":"2026-08-14T05:39:31.786649Z"}}
+{"data":{"completed_at":"2026-08-14T05:39:31.961180Z","elapsed":3.2274105548858643,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019ffec8-5133-7021-82e0-22f38b25df63","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [3.2s]","name":"CommandCompleted","pid":14216,"thread":"tokio-rt-worker","ts":"2026-08-14T05:39:31.967098Z"}}
+[0m06:44:03.096487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000148BAB655D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000148BAB65390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000148BAB65350>]}
+
+
+============================== 06:44:03.106999 | 8f9ba8dc-fa3c-41b7-910a-04e7689e5528 ==============================
+[0m06:44:03.106999 [info ] [MainThread]: Running with dbt=1.12.0
+[0m06:44:03.109379 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\nanaa\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'logs'}
+[0m06:44:03.110511 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\AbaasahPC\Documents\pulsecare_analytics_phase1\pulsecare_analytics\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m06:44:03.112522 [debug] [MainThread]: Command `dbt run` failed at 06:44:03.112522 after 0.20 seconds
+[0m06:44:03.112522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000148BAB64610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000148BAAB2150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000148BAB73FD0>]}
+[0m06:44:03.113516 [debug] [MainThread]: Flushing usage events
+[0m06:44:04.370269 [debug] [MainThread]: An error was encountered while trying to flush usage events

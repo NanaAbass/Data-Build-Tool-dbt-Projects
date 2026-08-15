@@ -1,0 +1,11 @@
+region_id,region_name,state,timezone,network_tier
+R01,Metro North,NY,America/New_York,Tier 1
+R02,Metro South,FL,America/New_York,Tier 1
+R03,Central Plains,TX,America/Chicago,Tier 2
+R04,Pacific Coast,CA,America/Los_Angeles,Tier 1
+R05,Mountain West,CO,America/Denver,Tier 2
+R06,Great Lakes,IL,America/Chicago,Tier 1
+R07,Southeast,GA,America/New_York,Tier 2
+R08,Pacific Northwest,WA,America/Los_Angeles,Tier 2
+R09,Southwest Desert,AZ,America/Phoenix,Tier 3
+R10,New England,MA,America/New_York,Tier 3

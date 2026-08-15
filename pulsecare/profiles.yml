@@ -1,0 +1,8 @@
+pulsecare:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'dev.duckdb'
+      schema: raw
+      threads: 4

@@ -1,0 +1,16 @@
+provider_id,provider_name,specialty,region_id,npi_number
+P001,Dr. Amara Okafor,Family Medicine,R01,1932847561
+P002,Dr. Liam Chen,Cardiology,R01,1847293650
+P003,Dr. Sofia Reyes,Pediatrics,R02,1765432980
+P004,Dr. Marcus Webb,Family Medicine,R03,1654938271
+P005,Dr. Priya Nair,Orthopedics,R03,1543829760
+P006,Dr. James Whitfield,Dermatology,R04,1432758690
+P007,Dr. Elena Vasquez,Family Medicine,R05,1321647890
+P008,Dr. Noah Kim,Cardiology,R05,1219836470
+P009,Dr. Grace Adeyemi,Pediatrics,R06,1198273465
+P010,Dr. Ryan O'Connell,Orthopedics,R07,1087263954
+P011,Dr. Mei Lin,Family Medicine,R07,1976352840
+P012,Dr. Tobias Hartmann,Dermatology,R08,1865243971
+P013,Dr. Aisha Rahman,Cardiology,R09,1754132968
+P014,Dr. Diego Fernandez,Family Medicine,R09,1643921870
+P015,Dr. Hannah Brooks,Pediatrics,R10,1532810769

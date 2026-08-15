@@ -1,0 +1,19 @@
+sources:
+    - name: raw
+      database: 'dev'
+      schema: raw
+      tables:
+        - name: patient_visits
+          description: "Patient visit table"
+          
+        - name: insurance_claims
+          description: "Insurance claims table"
+          
+        - name: providers
+          description: "Providers table"
+
+        - name: region_lookup
+          description: "Regional metadata"
+
+
+        
