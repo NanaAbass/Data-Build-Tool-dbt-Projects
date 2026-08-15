@@ -1,0 +1,121 @@
+version: 2
+
+models:
+  - name: silver_providers
+    description: "Providers enriched with region metadata from the region_lookup seed."
+    columns:
+      - name: provider_id
+        tests:
+          - unique:
+              config:
+                severity: error
+          - not_null:
+              config:
+                severity: error
+
+  - name: silver_provider_roster
+    description: "Provider roster enriched with region metadata from bronze_region_lookup."
+    columns:
+      - name: provider_id
+        tests:
+          - unique:
+              config:
+                severity: error
+          - not_null:
+              config:
+                severity: error
+
+  - name: silver_patient_visits
+    description: "Patient visits enriched with provider and region attributes."
+    columns:
+      - name: visit_id
+        tests:
+          - unique:
+              config:
+                severity: error
+          - not_null:
+              config:
+                severity: error
+
+      - name: visit_date
+        tests:
+          - not_future_date:
+              config:
+                severity: error
+
+      - name: visit_status
+        tests:
+          - accepted_values:
+              values: ["Completed", "No-Show", "Cancelled"]
+              config:
+                severity: warn
+
+  - name: silver_claims
+    description: "Insurance claims joined to their originating visit, provider, and region."
+    columns:
+      - name: claim_id
+        tests:
+          - unique:
+              config:
+                severity: error
+          - not_null:
+              config:
+                severity: error
+
+      - name: billed_amount
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+      - name: discount_amount
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+      - name: net_expected_amount
+        description: "billed_amount - discount_amount; must never be negative."
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+      - name: claim_date
+        tests:
+          - not_future_date:
+              config:
+                severity: error
+
+  - name: silver_visit_claims
+    description: "Wide denormalized view of visits joined to claims, providers, and regions."
+    columns:
+      - name: visit_id
+        tests:
+          - not_null:
+              config:
+                severity: error
+
+      - name: claim_id
+        tests:
+          - not_null:
+              config:
+                severity: warn
+
+      - name: billed_amount
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+      - name: discount_amount
+        tests:
+          - non_negative:
+              config:
+                severity: error
+
+      - name: claim_date
+        tests:
+          - not_future_date:
+              config:
+                severity: error
